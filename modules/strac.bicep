@@ -1,8 +1,3 @@
-// resource azbiceprg1 'Microsoft.Resources/resourceGroups@2021-04-01' existing = {
-//   name: 'testingbicep_rg'
-//   scope: subscription(Dev2)
-// }
-
 resource bicepstorage 'Microsoft.Storage/storageAccounts@2021-08-01' = {
   name: 'bicepstrac01'
   location: 'australiaeast'
@@ -13,5 +8,6 @@ resource bicepstorage 'Microsoft.Storage/storageAccounts@2021-08-01' = {
 
   properties: {
     allowBlobPublicAccess: true
+    isHnsEnabled: true
   }
 }
