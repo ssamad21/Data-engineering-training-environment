@@ -1,33 +1,16 @@
-resource symbolicname 'Microsoft.DataFactory/factories@2018-06-01' = {
-  name: 'string'
-  location: 'string'
+resource datafactorytest 'Microsoft.DataFactory/factories@2018-06-01' = {
+  name: 'dtest1bicep'
+  location: 'australiaeast'
   tags: {
-    tagName1: 'tagValue1'
-    tagName2: 'tagValue2'
+    cost_centre : 'D0156N'
+    owner_email : 'ssyed7@kpmg.com.au'
+    project     : 'Data Engineering Training'
   }
   identity: {
-    type: 'string'
-    userAssignedIdentities: {}
+    type: 'SystemAssigned'
   }
   properties: {
-    encryption: {
-      identity: {
-        userAssignedIdentity: 'string'
-      }
-      keyName: 'string'
-      keyVersion: 'string'
-      vaultBaseUrl: 'string'
-    }
     globalParameters: {}
-    publicNetworkAccess: 'string'
-    repoConfiguration: {
-      accountName: 'string'
-      collaborationBranch: 'string'
-      lastCommitId: 'string'
-      repositoryName: 'string'
-      rootFolder: 'string'
-      type: 'string'
-      // For remaining properties, see FactoryRepoConfiguration objects
-    }
+    publicNetworkAccess: 'Enabled'
   }
 }
